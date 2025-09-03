@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地理问答系统</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- 导航栏 -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <i class="bi bi-geo-alt-fill me-2"></i>
+                    地理问答系统
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="statsBtn">
+                                <i class="bi bi-bar-chart-fill me-1"></i>统计信息
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- 标题区域 -->
+                    <div class="text-center mb-5">
+                        <h1 class="display-4 text-primary mb-3">
+                            <i class="bi bi-globe-asia-australia me-3"></i>
+                            智能地理问答
+                        </h1>
+                        <p class="lead text-muted">
+                            基于人工智能的中国地理知识问答系统，支持省份、河流、山脉等地理信息查询
+                        </p>
+                    </div>
+
+                    <!-- 问答区域 -->
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-header bg-light">
+                            <h5 class="card-title mb-0">
+                                <i class="bi bi-chat-dots-fill me-2"></i>
+                                提问区域
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="input-group mb-3">
+                                <input type="text" 
+                                       class="form-control form-control-lg" 
+                                       id="questionInput" 
+                                       placeholder="请输入您的地理问题，例如：北京是哪个省的省会？"
+                                       onkeypress="handleKeyPress(event)">
+                                <button class="btn btn-primary btn-lg" 
+                                        type="button" 
+                                        id="askButton" 
+                                        onclick="askQuestion()">
+                                    <i class="bi bi-search me-1"></i>
+                                    提问
+                                </button>
+                            </div>
+                            
+                            <!-- 示例问题 -->
+                            <div class="mb-3">
+                                <small class="text-muted">示例问题：</small>
+                                <div class="mt-2">
+                                    <button class="btn btn-outline-secondary btn-sm me-2 mb-2" 
+                                            onclick="setQuestion('广东省的省会是哪里？')">
+                                        广东省的省会是哪里？
+                                    </button>
+                                    <button class="btn btn-outline-secondary btn-sm me-2 mb-2" 
+                                            onclick="setQuestion('长江有多长？')">
+                                        长江有多长？
+                                    </button>
+                                    <button class="btn btn-outline-secondary btn-sm me-2 mb-2" 
+                                            onclick="setQuestion('珠穆朗玛峰在哪里？')">
+                                        珠穆朗玛峰在哪里？
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 加载指示器 -->
+                    <div id="loadingIndicator" class="text-center mb-4" style="display: none;">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">加载中...</span>
+                        </div>
+                        <p class="mt-2 text-muted">正在思考中...</p>
+                    </div>
+
+                    <!-- 答案显示区域 -->
+                    <div id="answerArea" class="card shadow-sm mb-4" style="display: none;">
+                        <div class="card-header bg-success text-white">
+                            <h5 class="card-title mb-0">
+                                <i class="bi bi-lightbulb-fill me-2"></i>
+                                回答
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="alert alert-info mb-3">
+                                <strong>问题：</strong>
+                                <span id="displayQuestion"></span>
+                            </div>
+                            <div class="answer-content">
+                                <p id="displayAnswer" class="mb-0"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 错误显示区域 -->
+                    <div id="errorArea" class="alert alert-danger" style="display: none;">
+                        <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                        <span id="errorMessage"></span>
+                    </div>
+
+                    <!-- 功能介绍 -->
+                    <div class="row mt-5">
+                        <div class="col-md-4 mb-3">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-map-fill text-primary fs-1 mb-3"></i>
+                                    <h5 class="card-title">省份信息</h5>
+                                    <p class="card-text text-muted">
+                                        查询中国各省份的省会城市、地理位置等信息
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-water text-info fs-1 mb-3"></i>
+                                    <h5 class="card-title">河流山脉</h5>
+                                    <p class="card-text text-muted">
+                                        了解主要河流、山脉的长度、位置、海拔等信息
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-compass text-warning fs-1 mb-3"></i>
+                                    <h5 class="card-title">综合查询</h5>
+                                    <p class="card-text text-muted">
+                                        支持各种地理知识的综合性问题查询
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 统计信息模态框 -->
+    <div class="modal fade" id="statsModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="bi bi-bar-chart-fill me-2"></i>
+                        系统统计信息
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="statsContent">
+                        <div class="text-center">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">加载中...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light text-center py-4 mt-5">
+        <div class="container">
+            <p class="text-muted mb-0">
+                © 2024 地理问答系统 | 基于人工智能技术构建
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
