@@ -1,0 +1,362 @@
+[
+  {
+    "question": "新疆省的省会是哪里？",
+    "answer": "新疆省的省会是乌鲁木齐。",
+    "category": "省会城市"
+  },
+  {
+    "question": "湖北省的省会是哪里？",
+    "answer": "湖北省的省会是武汉。",
+    "category": "省会城市"
+  },
+  {
+    "question": "西宁是哪个省的省会？",
+    "answer": "西宁是青海省的省会。",
+    "category": "省会城市"
+  },
+  {
+    "question": "河南省的省会是哪里？",
+    "answer": "河南省的省会是郑州。",
+    "category": "省会城市"
+  },
+  {
+    "question": "太白山海拔多高？",
+    "answer": "太白山海拔3771米。",
+    "category": "山脉"
+  },
+  {
+    "question": "河北省的省会是哪里？",
+    "answer": "河北省的省会是石家庄。",
+    "category": "省会城市"
+  },
+  {
+    "question": "黄河最终流向哪里？",
+    "answer": "黄河最终流入渤海。",
+    "category": "河流"
+  },
+  {
+    "question": "甘肃省的省会是哪里？",
+    "answer": "甘肃省的省会是兰州。",
+    "category": "省会城市"
+  },
+  {
+    "question": "山西省的省会是哪里？",
+    "answer": "山西省的省会是太原。",
+    "category": "省会城市"
+  },
+  {
+    "question": "黄河有多长？",
+    "answer": "黄河全长5464公里。",
+    "category": "河流"
+  },
+  {
+    "question": "武汉是哪个省的省会？",
+    "answer": "武汉是湖北省的省会。",
+    "category": "省会城市"
+  },
+  {
+    "question": "昆仑山的最高峰是什么？",
+    "answer": "昆仑山的最高峰是公格尔峰。",
+    "category": "山脉"
+  },
+  {
+    "question": "珠穆朗玛峰海拔多高？",
+    "answer": "珠穆朗玛峰海拔8848.86米。",
+    "category": "山脉"
+  },
+  {
+    "question": "山东省的省会是哪里？",
+    "answer": "山东省的省会是济南。",
+    "category": "省会城市"
+  },
+  {
+    "question": "天津是哪个省的省会？",
+    "answer": "天津是天津省的省会。",
+    "category": "省会城市"
+  },
+  {
+    "question": "海口是哪个省的省会？",
+    "answer": "海口是海南省的省会。",
+    "category": "省会城市"
+  },
+  {
+    "question": "浙江省的省会是哪里？",
+    "answer": "浙江省的省会是杭州。",
+    "category": "省会城市"
+  },
+  {
+    "question": "银川是哪个省的省会？",
+    "answer": "银川是宁夏省的省会。",
+    "category": "省会城市"
+  },
+  {
+    "question": "黄河发源于哪里？",
+    "answer": "黄河发源于青藏高原。",
+    "category": "河流"
+  },
+  {
+    "question": "江苏省的省会是哪里？",
+    "answer": "江苏省的省会是南京。",
+    "category": "省会城市"
+  },
+  {
+    "question": "中国最长的河流是什么？",
+    "answer": "中国最长的河流是长江，全长6300公里。",
+    "category": "综合"
+  },
+  {
+    "question": "江西省的省会是哪里？",
+    "answer": "江西省的省会是南昌。",
+    "category": "省会城市"
+  },
+  {
+    "question": "珠江有多长？",
+    "answer": "珠江全长2320公里。",
+    "category": "河流"
+  },
+  {
+    "question": "哈尔滨是哪个省的省会？",
+    "answer": "哈尔滨是黑龙江省的省会。",
+    "category": "省会城市"
+  },
+  {
+    "question": "台湾省的省会是哪里？",
+    "answer": "台湾省的省会是台北。",
+    "category": "省会城市"
+  },
+  {
+    "question": "长江发源于哪里？",
+    "answer": "长江发源于青藏高原。",
+    "category": "河流"
+  },
+  {
+    "question": "西藏省的省会是哪里？",
+    "answer": "西藏省的省会是拉萨。",
+    "category": "省会城市"
+  },
+  {
+    "question": "吉林省的省会是哪里？",
+    "answer": "吉林省的省会是长春。",
+    "category": "省会城市"
+  },
+  {
+    "question": "黑龙江省的省会是哪里？",
+    "answer": "黑龙江省的省会是哈尔滨。",
+    "category": "省会城市"
+  },
+  {
+    "question": "松花江发源于哪里？",
+    "answer": "松花江发源于长白山。",
+    "category": "河流"
+  },
+  {
+    "question": "中国有多少个省级行政区？",
+    "answer": "中国共有34个省级行政区，包括23个省、5个自治区、4个直辖市和2个特别行政区。",
+    "category": "综合"
+  },
+  {
+    "question": "公格尔峰海拔多高？",
+    "answer": "公格尔峰海拔7649米。",
+    "category": "山脉"
+  },
+  {
+    "question": "珠江发源于哪里？",
+    "answer": "珠江发源于云贵高原。",
+    "category": "河流"
+  },
+  {
+    "question": "郑州是哪个省的省会？",
+    "answer": "郑州是河南省的省会。",
+    "category": "省会城市"
+  },
+  {
+    "question": "秦岭的最高峰是什么？",
+    "answer": "秦岭的最高峰是太白山。",
+    "category": "山脉"
+  },
+  {
+    "question": "安徽省的省会是哪里？",
+    "answer": "安徽省的省会是合肥。",
+    "category": "省会城市"
+  },
+  {
+    "question": "托木尔峰海拔多高？",
+    "answer": "托木尔峰海拔7443米。",
+    "category": "山脉"
+  },
+  {
+    "question": "昆明是哪个省的省会？",
+    "answer": "昆明是云南省的省会。",
+    "category": "省会城市"
+  },
+  {
+    "question": "福州是哪个省的省会？",
+    "answer": "福州是福建省的省会。",
+    "category": "省会城市"
+  },
+  {
+    "question": "四川省的省会是哪里？",
+    "answer": "四川省的省会是成都。",
+    "category": "省会城市"
+  },
+  {
+    "question": "长春是哪个省的省会？",
+    "answer": "长春是吉林省的省会。",
+    "category": "省会城市"
+  },
+  {
+    "question": "沈阳是哪个省的省会？",
+    "answer": "沈阳是辽宁省的省会。",
+    "category": "省会城市"
+  },
+  {
+    "question": "长江有多长？",
+    "answer": "长江全长6300公里。",
+    "category": "河流"
+  },
+  {
+    "question": "松花江有多长？",
+    "answer": "松花江全长1900公里。",
+    "category": "河流"
+  },
+  {
+    "question": "北京省的省会是哪里？",
+    "answer": "北京省的省会是北京。",
+    "category": "省会城市"
+  },
+  {
+    "question": "广州是哪个省的省会？",
+    "answer": "广州是广东省的省会。",
+    "category": "省会城市"
+  },
+  {
+    "question": "青海省的省会是哪里？",
+    "answer": "青海省的省会是西宁。",
+    "category": "省会城市"
+  },
+  {
+    "question": "天山位于哪里？",
+    "answer": "天山位于新疆。",
+    "category": "山脉"
+  },
+  {
+    "question": "广西省的省会是哪里？",
+    "answer": "广西省的省会是南宁。",
+    "category": "省会城市"
+  },
+  {
+    "question": "南京是哪个省的省会？",
+    "answer": "南京是江苏省的省会。",
+    "category": "省会城市"
+  },
+  {
+    "question": "上海省的省会是哪里？",
+    "answer": "上海省的省会是上海。",
+    "category": "省会城市"
+  },
+  {
+    "question": "兰州是哪个省的省会？",
+    "answer": "兰州是甘肃省的省会。",
+    "category": "省会城市"
+  },
+  {
+    "question": "辽宁省的省会是哪里？",
+    "answer": "辽宁省的省会是沈阳。",
+    "category": "省会城市"
+  },
+  {
+    "question": "珠江最终流向哪里？",
+    "answer": "珠江最终流入南海。",
+    "category": "河流"
+  },
+  {
+    "question": "海南省的省会是哪里？",
+    "answer": "海南省的省会是海口。",
+    "category": "省会城市"
+  },
+  {
+    "question": "济南是哪个省的省会？",
+    "answer": "济南是山东省的省会。",
+    "category": "省会城市"
+  },
+  {
+    "question": "秦岭位于哪里？",
+    "answer": "秦岭位于陕西、甘肃、河南。",
+    "category": "山脉"
+  },
+  {
+    "question": "湖南省的省会是哪里？",
+    "answer": "湖南省的省会是长沙。",
+    "category": "省会城市"
+  },
+  {
+    "question": "贵阳是哪个省的省会？",
+    "answer": "贵阳是贵州省的省会。",
+    "category": "省会城市"
+  },
+  {
+    "question": "云南省的省会是哪里？",
+    "answer": "云南省的省会是昆明。",
+    "category": "省会城市"
+  },
+  {
+    "question": "喜马拉雅山位于哪里？",
+    "answer": "喜马拉雅山位于中国西藏与尼泊尔边界。",
+    "category": "山脉"
+  },
+  {
+    "question": "宁夏省的省会是哪里？",
+    "answer": "宁夏省的省会是银川。",
+    "category": "省会城市"
+  },
+  {
+    "question": "松花江最终流向哪里？",
+    "answer": "松花江最终流入黑龙江。",
+    "category": "河流"
+  },
+  {
+    "question": "昆仑山位于哪里？",
+    "answer": "昆仑山位于新疆、青海、西藏。",
+    "category": "山脉"
+  },
+  {
+    "question": "喜马拉雅山的最高峰是什么？",
+    "answer": "喜马拉雅山的最高峰是珠穆朗玛峰。",
+    "category": "山脉"
+  },
+  {
+    "question": "台北是哪个省的省会？",
+    "answer": "台北是台湾省的省会。",
+    "category": "省会城市"
+  },
+  {
+    "question": "贵州省的省会是哪里？",
+    "answer": "贵州省的省会是贵阳。",
+    "category": "省会城市"
+  },
+  {
+    "question": "重庆是哪个省的省会？",
+    "answer": "重庆是重庆省的省会。",
+    "category": "省会城市"
+  },
+  {
+    "question": "西安是哪个省的省会？",
+    "answer": "西安是陕西省的省会。",
+    "category": "省会城市"
+  },
+  {
+    "question": "北京是哪个省的省会？",
+    "answer": "北京是北京省的省会。",
+    "category": "省会城市"
+  },
+  {
+    "question": "广东省的省会是哪里？",
+    "answer": "广东省的省会是广州。",
+    "category": "省会城市"
+  },
+  {
+    "question": "天山的最高峰是什么？",
+    "answer": "天山的最高峰是托木尔峰。",
+    "category": "山脉"
+  }
+]
