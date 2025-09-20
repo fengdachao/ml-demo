@@ -1,3 +1,55 @@
+# Mac System Monitor (CPU / Memory / Network)
+
+一个简单、轻量的 macOS 系统监控小工具，使用 Python + Tkinter + psutil 实现，实时显示：
+
+- CPU 使用率
+- 内存使用率（含已用/总量）
+- 网络上传/下载速度和总计
+
+> 提示：本工具同样可在其他桌面平台运行（Windows/Linux），但打包 `.app` 需在 macOS 上进行。
+
+## 运行（推荐）
+
+前置：macOS 安装了 Python 3（建议 3.9+）。可用 `python3 --version` 检查。
+
+```bash
+cd /path/to/your/workspace
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python main.py
+```
+
+## 打包为 macOS 应用 (.app)
+
+在 macOS 上执行以下命令（需已激活虚拟环境或全局安装）：
+
+```bash
+pip install pyinstaller
+pyinstaller --noconfirm --windowed --name "Mac System Monitor" main.py
+```
+
+构建完成后，应用位于 `dist/Mac System Monitor.app`。首次运行可能被 Gatekeeper 拦截，可在系统设置「隐私与安全性」中允许打开。
+
+## 功能说明
+
+- CPU：非阻塞采样刷新（默认 1s 间隔），进度条和数值百分比。
+- 内存：显示已用/总量及百分比。
+- 网络：基于总计字节数的差分计算上/下行速率，并显示累计发送/接收总量。
+
+## 自定义
+
+- 刷新频率：在 `main.py` 初始化 `SystemMonitorApp(root, update_interval_ms=1000)` 调整毫秒数。
+- 主题与样式：可在 `main.py` 中调整 `ttk.Style()` 或布局。
+
+## 卸载
+
+删除本项目目录；如使用了虚拟环境，退出并删除 `.venv` 即可。
+
+## 许可证
+
+MIT
+
 # 地理问答系统
 
 一个基于人工智能的中国地理知识问答系统，支持省份、河流、山脉等地理信息查询。
