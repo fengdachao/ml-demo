@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mac Monitor</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>System Monitor</h1>
+      <div class="card">
+        <div class="card-title">CPU</div>
+        <div class="metric"><span id="cpu-load">--</span>%</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Memory</div>
+        <div class="metric"><span id="mem-used">--</span> / <span id="mem-total">--</span></div>
+        <div class="submetric"><span id="mem-percent">--</span>% used</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Network</div>
+        <div class="metric">
+          ↓ <span id="rx-rate">--</span> • ↑ <span id="tx-rate">--</span>
+        </div>
+        <div class="submetric">
+          Total ↓ <span id="rx-total">--</span> • Total ↑ <span id="tx-total">--</span>
+        </div>
+      </div>
+      <div class="timestamp">Updated: <span id="updated">--</span></div>
+    </div>
+    <script src="renderer.js"></script>
+  </body>
+  </html>
+
